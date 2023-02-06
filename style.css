@@ -1,0 +1,34 @@
+body{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color:white;
+}
+.content{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+}
+.content > *{
+    border:2px solid;
+    grid-column:1/span 12;
+    }
+    #rock{
+        grid-area:5/4/8/5;
+    }
+    #paper{
+        grid-area:6/6/8/7;
+    }
+    #scissor{
+        grid-area:6/8/8/9;
+    }
+.computer-choice{
+    grid-area:2/5/3/6;
+}
+.your-choice{
+    grid-area:2/7/3/8;
+}
+.result{
+    grid-area:3/6/4/7;
+}
