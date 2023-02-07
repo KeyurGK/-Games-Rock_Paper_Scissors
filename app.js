@@ -15,13 +15,13 @@ function generateComputerChoice(){
     const randomNumber = Math.floor((Math.random()*3))+1;
     console.log(randomNumber);
     if(randomNumber===1){
-        computerChoice='rock';
+        computerChoice='🪨';
     }
     if(randomNumber===2){
-        computerChoice='paper';
+        computerChoice='🧻';
     }
     if(randomNumber===3){
-        computerChoice='scissor';
+        computerChoice='✂️';
     }
     computerChoiceDisplay.innerHTML=computerChoice;
 }
@@ -29,22 +29,22 @@ function getResult(){
 if(computerChoice === userChoice){
     result = 'It is a draw!';
 }
-if(computerChoice === 'rock' && userChoice==='paper'){
+if(computerChoice === '🪨' && userChoice==='🧻'){
     result = 'You Win🥳';
 }
-if(computerChoice === 'rock' && userChoice==='scissor'){
+if(computerChoice === '🪨' && userChoice==='✂️'){
     result = 'You Lose☹️';
 }
-if(computerChoice === 'paper' && userChoice==='scissor'){
+if(computerChoice === '🧻' && userChoice==='✂️'){
     result = 'You Win🥳';
 }
-if(computerChoice === 'paper' && userChoice==='rock'){
+if(computerChoice === '🧻' && userChoice==='🪨'){
     result = 'You Lose☹️';
 }
-if(computerChoice === 'scissor' && userChoice==='paper'){
+if(computerChoice === '✂️' && userChoice==='🧻'){
     result = 'You Lose☹️';
 }
-if(computerChoice === 'scissor' && userChoice==='rock'){
+if(computerChoice === '✂️' && userChoice==='🪨'){
     result = 'You Win🥳';
 }
 resultDisplay.innerHTML=result;
