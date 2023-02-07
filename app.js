@@ -6,7 +6,7 @@ const possibleChoices = document.querySelectorAll('button');
 let userChoice,computerChoice,result;
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e)=>{
      userChoice = e.target.id
-    userChoiceDisplay.innerHTML = userChoice;
+    userChoiceDisplay.innerHTML = "<br />" + userChoice;
     generateComputerChoice();
     getResult();
 }));
@@ -15,37 +15,37 @@ function generateComputerChoice(){
     const randomNumber = Math.floor((Math.random()*3))+1;
     console.log(randomNumber);
     if(randomNumber===1){
-        computerChoice='🪨';
+        computerChoice='rock';
     }
     if(randomNumber===2){
-        computerChoice='🧻';
+        computerChoice='paper';
     }
     if(randomNumber===3){
-        computerChoice='✂️';
+        computerChoice='scissor';
     }
-    computerChoiceDisplay.innerHTML=computerChoice;
+    computerChoiceDisplay.innerHTML="<br />" + computerChoice;
 }
 function getResult(){
 if(computerChoice === userChoice){
     result = 'It is a draw!';
 }
-if(computerChoice === '🪨' && userChoice==='🧻'){
+if(computerChoice === 'rock' && userChoice==='paper'){
     result = 'You Win🥳';
 }
-if(computerChoice === '🪨' && userChoice==='✂️'){
+if(computerChoice === 'rock' && userChoice==='scissor'){
     result = 'You Lose☹️';
 }
-if(computerChoice === '🧻' && userChoice==='✂️'){
+if(computerChoice === 'paper' && userChoice==='scissor'){
     result = 'You Win🥳';
 }
-if(computerChoice === '🧻' && userChoice==='🪨'){
+if(computerChoice === 'paper' && userChoice==='rock'){
     result = 'You Lose☹️';
 }
-if(computerChoice === '✂️' && userChoice==='🧻'){
+if(computerChoice === 'scissor' && userChoice==='paper'){
     result = 'You Lose☹️';
 }
-if(computerChoice === '✂️' && userChoice==='🪨'){
+if(computerChoice === 'scissor' && userChoice==='rock'){
     result = 'You Win🥳';
 }
-resultDisplay.innerHTML=result;
+resultDisplay.innerHTML="<br />" + result;
 }

@@ -9,7 +9,7 @@ body{
 .content{
     display:grid;
     grid-template-columns:repeat(12,1fr);
-    grid-template-rows:repeat(5,0.75fr);
+    grid-template-rows:repeat(5,100px);
 }
 .content > *{
     
@@ -22,24 +22,39 @@ body{
 .content > button{
     font-size:28px;
 }
-    #rock{
-        grid-area:4/4/5/5;
-    }
+.content p{
+    grid-area:2/6/3/8;
+    justify-self: center;
+    font-size:28px;
+}
+#rock{
+    grid-area:5/3/6/5;
+    
+}
     #paper{
-        grid-area:4/6/5/7;
+        grid-area:5/6/6/8;
     }
     #scissor{
-        grid-area:4/8/5/9;
+        grid-area:5/9/6/11;
     }
 .computer-choice{
-    grid-area:2/4/3/6;
-    justify-self: center;
+    grid-area:2/3/3/6;
+    text-align: center;
+   align-self: flex-start;
+    font-size: 32px;
 }
 .your-choice{
-    grid-area:2/7/3/9;
-    justify-self: center;
+    grid-area:2/8/3/11;
+    align-self: flex-start;
+    text-align: center;
+    font-size: 32px;
+   
 }
 .result{
-    grid-area:3/6/4/7;
+    grid-area:3/6/4/8;
+    font-size: 32px;
+    text-align: center;
+    align-self: flex-start;
     justify-self: center;
+
 }
