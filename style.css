@@ -42,7 +42,7 @@ body{
    font-family: 'Share Tech', sans-serif;
 }
 #computer-choice-display{
-    grid-area:3/9/4/13;
+    grid-area:3/1/4/5;
     height:50%;
     padding-bottom: 10%;
     text-transform: uppercase;
@@ -66,7 +66,7 @@ body{
     font-family: 'Share Tech', sans-serif;
 }
 #your-choice-display{
-    grid-area:3/1/4/5;
+    grid-area:3/9/4/13;
     height:50%;
     padding-bottom: 10%;
     text-transform: uppercase;
