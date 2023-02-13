@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 body{
     background-image: url(bg.png);
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center center;
+    background-size: cover;
+    background-position:center center;
     background-attachment: fixed;
     color:white;
 }
 .content{
     display:grid;
     grid-template-columns:repeat(12,1fr);
-    grid-template-rows:repeat(5,100px);
+    grid-template-rows:repeat(6,75px);
 }
 .content > *{
     
@@ -21,40 +22,131 @@ body{
 }
 .content > button{
     font-size:28px;
+   
+    
+}
+.title{
+    font-size:20px;
+    text-align: center;
+    padding-top: 5%;
+    height: 50%;
+    align-self: center;
+    font-family: 'Share Tech', sans-serif;
+}
+
+.computer-choice{
+    grid-area:2/1/3/5;
+    text-align: center;
+    align-self:center;
+   font-size:12px; 
+   font-family: 'Share Tech', sans-serif;
+}
+#computer-choice-display{
+    grid-area:3/9/4/13;
+    height:50%;
+    padding-bottom: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    align-self:center;
 }
 .content p{
     grid-area:2/6/3/8;
-    justify-self: center;
-    font-size:28px;
-}
-#rock{
-    grid-area:5/3/6/5;
-    
-}
-    #paper{
-        grid-area:5/6/6/8;
-    }
-    #scissor{
-        grid-area:5/9/6/11;
-    }
-.computer-choice{
-    grid-area:2/3/3/6;
     text-align: center;
-   align-self: flex-start;
-    font-size: 32px;
+    background-image:linear-gradient(to right,rgba(208, 2, 249, 0.817),rgb(248, 134, 3));
+    color: black;
+    border: none;
+    align-self: center;
+    font-size:32px;
 }
 .your-choice{
-    grid-area:2/8/3/11;
-    align-self: flex-start;
+    grid-area:2/9/3/13;
+    align-self:center;
     text-align: center;
-    font-size: 32px;
-   
+    font-size: 12px;
+    font-family: 'Share Tech', sans-serif;
+}
+#your-choice-display{
+    grid-area:3/1/4/5;
+    height:50%;
+    padding-bottom: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    align-self:center;
 }
 .result{
-    grid-area:3/6/4/8;
-    font-size: 32px;
-    text-align: center;
-    align-self: flex-start;
-    justify-self: center;
-
+    grid-area:4/4/5/10;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   font-family: 'Share Tech', sans-serif;
+   text-align: center;  
+}
+#result-display{
+    grid-area:5/4/6/10;
+    height:50%;
+    padding-bottom: 10%;
+    align-self: center;    
+    text-align: center;   
+    text-transform: uppercase;
+}
+#rock{
+    grid-area:6/1/7/4;    
+}
+#paper{
+    grid-area:6/5/7/9;
+}
+#scissor{
+    grid-area:6/10/7/13;
+}
+@media (min-width:400px){
+    .title{
+        font-size:24px;
+        padding-top: 1%;
+    }
+    .computer-choice,.your-choice{
+        height:60%;
+        font-size:18px;
+    }
+    .result{
+        height:50%;
+        font-size:26px;
+       align-items: center;
+       padding-top: 3%;
+      
+    }
+}
+@media (min-width:900px){
+    .title{
+        grid-column:5/9 ;
+        font-size:24px;
+        padding-top: 1%;
+    }
+    .computer-choice,.your-choice{
+        height:75%;
+        grid-column:2/4 ;
+        font-size:24px;
+    }
+    .your-choice{
+        grid-column:10/12;
+    }
+    #computer-choice-display{
+        grid-column:2/4;
+    }
+    #your-choice-display{
+        grid-column:10/12;
+    }
+    .result{
+        grid-column:6/8;       
+    }
+    #result-display{
+        grid-area:5/6/6/8;
+    }
+    #rock{
+        grid-column:2/4;
+    }
+    #paper{
+        grid-column:6/8;
+    }
+    #scissor{
+        grid-column:10/12;
+    }
 }
